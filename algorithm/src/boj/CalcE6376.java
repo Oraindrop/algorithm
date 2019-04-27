@@ -1,4 +1,4 @@
-package truckparking;
+package boj;
 
 public class CalcE6376 {
     public static void main(String[] args) {
