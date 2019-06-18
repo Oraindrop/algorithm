@@ -34,7 +34,17 @@ public class Newcomer1946 {
 				}
 				
 			});
-			System.out.println(list);
+			int interviewMax = list.get(0).getbScore();
+			int answer = 1;
+			for (int j = 1; j < n; j++) {
+				int interview = list.get(j).getbScore();
+				if (interviewMax > interview) {
+					interviewMax = interview;
+					answer++;
+				}
+			}
+			
+			System.out.println(answer);
 		}
 	}
 
