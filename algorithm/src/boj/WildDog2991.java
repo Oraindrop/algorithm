@@ -34,6 +34,7 @@ public class WildDog2991 {
 			if (modC >= 1 && modC <= c) answer++;
 			System.out.println(answer);
 		}
+		
 	}
 
 }
