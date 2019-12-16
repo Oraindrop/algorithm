@@ -3,8 +3,6 @@ package boj;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 
 public class BonusScore17389 {
 
@@ -25,8 +23,6 @@ public class BonusScore17389 {
 			}
 		}
 		System.out.println(score);
-		
-		
 	}
 
 }
