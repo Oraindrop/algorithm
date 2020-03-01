@@ -17,7 +17,7 @@ public class Palindrom10174 {
 			String reverse = reverse(origin);
 			sb.append(origin.equals(reverse) ? "Yes" : "No").append(System.lineSeparator());
 		}
-		System.out.println(sb.toString()); 
+		System.out.println(sb.toString());
 	}
 
 	static String reverse(String origin) {
