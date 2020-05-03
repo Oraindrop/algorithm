@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,7 +15,7 @@ public class Boj2729 {
         StringBuilder aSb = new StringBuilder();
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < t; i++) {
+        for (int j = 0; j < t; j++) {
             st = new StringTokenizer(br.readLine());
             String a = st.nextToken();
 		    String b = st.nextToken();
@@ -72,3 +74,4 @@ public class Boj2729 {
 	}
 
 }
+
