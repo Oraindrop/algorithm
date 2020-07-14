@@ -19,13 +19,16 @@ public class Boj1527 {
 		q.add(4l);
 		q.add(7l);
 		long answer = 0;
-		while (q.size() > 0) {
+		while (!q.isEmpty()) {
 			long value = q.poll();
 			
-			if (value >= a && value <= b) {
+			if (value < a) {
+				q.add((value * 10l) + 4l);
+				q.add((value * 10l) + 7l);
+			} else if (value <= b && value <= 1000000000) {
 				answer++;
-				q.add((value * 10) + 4l);
-				q.add((value * 10) + 7l);
+				q.add((value * 10l) + 4l);
+				q.add((value * 10l) + 7l);
 			}
 		}
 		
