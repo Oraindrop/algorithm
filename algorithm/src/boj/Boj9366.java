@@ -3,9 +3,7 @@ package boj;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Boj9366 {
@@ -14,29 +12,24 @@ public class Boj9366 {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
-		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
-		List<Integer> list = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			list.clear();
+		int[] arr = new int[3];
+		for (int i = 1; i <= n; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < 3; j++) {
-				list.add(Integer.parseInt(st.nextToken()));
+				arr[j] = Integer.parseInt(st.nextToken());
 			}
-			Collections.sort(list);
-			sb.append("Case #").append((i+1)).append(": ");
-			if (list.get(2) >= list.get(0) + list.get(1)) {
-				sb.append("invalid!");
-			} else if (list.get(0) == list.get(1) && list.get(1) == list.get(2)) {
-				sb.append("equilateral");
-			} else if (list.get(0) == list.get(1) || list.get(1) == list.get(2) || list.get(0) == list.get(2)) {
-				sb.append("isosceles");
+			Arrays.sort(arr);
+			if (arr[2] >= (arr[0] + arr[1])) {
+				System.out.println(String.format("Case #%s: %s", i, "invalid!"));
+			} else if (arr[0] == arr[1] && arr[1] == arr[2]) {
+				System.out.println(String.format("Case #%s: %s", i, "equilateral"));
+			} else if (arr[0] == arr[1] || arr[1] == arr[2] || arr[0] == arr[2]) {
+				System.out.println(String.format("Case #%s: %s", i, "isosceles"));
 			} else {
-				sb.append("scalene");
+				System.out.println(String.format("Case #%s: %s", i, "scalene"));
 			}
-			sb.append(System.lineSeparator());
 		}
-		System.out.println(sb.toString());
 	}
 
 }
