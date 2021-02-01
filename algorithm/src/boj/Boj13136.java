@@ -11,16 +11,16 @@ public class Boj13136 {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int r = Integer.parseInt(st.nextToken());
-		int c = Integer.parseInt(st.nextToken());
-		int n = Integer.parseInt(st.nextToken());
+		long r = Long.parseLong(st.nextToken());
+		long c = Long.parseLong(st.nextToken());
+		long n = Long.parseLong(st.nextToken());
 		
-		int a = r / n;
+		long a = r / n;
 		if (r % n != 0) {
 			a++;
 		}
 		
-		int b = c / n;
+		long b = c / n;
 		if (c % n != 0) {
 			b++;
 		}
