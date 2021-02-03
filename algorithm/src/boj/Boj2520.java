@@ -13,27 +13,27 @@ public class Boj2520 {
 		int t = Integer.parseInt(br.readLine());
 		StringTokenizer st;
 		StringBuilder sb = new StringBuilder();
-		double[] arr1 = {2.0, 2.0, 0.25, 0.065, 0.5625};
+		double[] arr1 = {8, 8, 4, 1, 9};
 		int[] arr2 = {1, 30, 25, 10};
 		for (int i = 0; i < t; i++) {
 			br.readLine();
 			st = new StringTokenizer(br.readLine());
-			int min = Integer.MAX_VALUE;
+			double min = Double.MAX_VALUE;
 			
 			for (int j = 0; j < 5; j++) {
-				int value = (int)(Integer.parseInt(st.nextToken()) / arr1[j]);
-				System.out.println(value);
+				double value = Integer.parseInt(st.nextToken()) / arr1[j];
 				if (min > value) min = value;
 			}
 			
 			st = new StringTokenizer(br.readLine());
 			
+			int sum = 0;
 			for (int j = 0; j < 4; j++) {
 				int value = (int)(Integer.parseInt(st.nextToken())) / arr2[j];
-				if (min > value) min = value;
+				sum += value;
 			}
 			
-			sb.append(min);
+			sb.append(Math.min(sum, (int)(min*16))).append(System.lineSeparator());
 		}
 		
 		System.out.print(sb.toString());
