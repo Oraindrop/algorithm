@@ -43,7 +43,7 @@ public class Boj20920 {
 		StringBuilder sb = new StringBuilder();
 		for (EnglishWord word : list) {
 			if (word.isShorter(m)) {
-				break;
+				continue;
 			} else {
 				sb.append(word.getWord()).append(System.lineSeparator());
 			}
