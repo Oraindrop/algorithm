@@ -8,6 +8,7 @@ public class Array2 {
 		System.out.println(solution(arr));
 	}
 	
+	// 문자 뒤집기
 	private static String solution(char[] message) {
 		
 		StringBuilder sb = new StringBuilder();
