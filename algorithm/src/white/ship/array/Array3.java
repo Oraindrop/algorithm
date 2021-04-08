@@ -1,4 +1,4 @@
-package white.ship;
+package white.ship.array;
 
 import java.util.Arrays;
 import java.util.HashMap;

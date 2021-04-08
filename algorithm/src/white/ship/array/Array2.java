@@ -1,4 +1,4 @@
-package white.ship;
+package white.ship.array;
 
 public class Array2 {
 
