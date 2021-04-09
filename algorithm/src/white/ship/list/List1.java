@@ -18,6 +18,7 @@ public class List1 {
 		}
 	}
 	
+	// 연결리스트 뒤집기
 	public LinkedNode reverse(LinkedNode head) {
 		LinkedNode cur = head;
 		LinkedNode pre = null;
@@ -33,6 +34,7 @@ public class List1 {
 		return pre;
 	}
 	
+	// 연결리스트 재귀로 뒤집기
 	public LinkedNode reverseRecursion(LinkedNode node) {
 		if (node.next == null) {
 			return node;
