@@ -23,31 +23,23 @@ public class Boj6322 {
 			int c = Integer.parseInt(st.nextToken());
 			double answer = 0.0;
 			if (a == -1) {
-				if (b >= c) {
-					sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
+				answer = Math.sqrt(c*c - b*b);
+				if (answer > 0) {
+					sb.append("a = ").append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
 				} else {
-					answer = Math.sqrt(c*c - b*b);
-					if (answer + b > c) {
-						sb.append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
-					} else {
-						sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
-					}
+					sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
 				}
 			} else if (b == -1) {
-				if (a >= c) {
-					sb.append("Impossible.").append(System.lineSeparator());
+				answer = Math.sqrt(c*c - a*a);
+				if (answer > 0) {
+					sb.append("b = ").append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
 				} else {
-					answer = Math.sqrt(c*c - a*a);
-					if (answer + a > c) {
-						sb.append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
-					} else {
-						sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
-					}
+					sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
 				}
 			} else {
 				answer = Math.sqrt(a*a + b*b);
-				if (answer < a + b) {
-					sb.append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
+				if (answer > 0) {
+					sb.append("c = ").append(String.format("%.3f", answer)).append(System.lineSeparator()).append(System.lineSeparator());
 				} else {
 					sb.append("Impossible.").append(System.lineSeparator()).append(System.lineSeparator());
 				}
