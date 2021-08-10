@@ -3,7 +3,6 @@ package boj;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 
 public class Boj2930 {
 
@@ -25,15 +24,19 @@ public class Boj2930 {
 		for (int i = 0; i < r; i++) {
 			String baseElement = base.substring(i, i+1); 
 
-			int maxSum = 0; 
+			int rSum = 0;
+			int sSum = 0;
+			int pSum = 0;
 			
 			for (int j = 0; j < n; j++) {
 				String target = arr[j].substring(i, i+1);
 				sum += judge(baseElement, target);
-				maxSum += Math.max(Math.max(judge("R", target), judge("S", target)), judge("P", target));
+				rSum += judge("R", target);
+				sSum += judge("S", target);
+				pSum += judge("P", target);
 			}
 			
-			max += maxSum;
+			max += Math.max(Math.max(rSum, sSum), pSum);
 		}
 		
 		System.out.println(sum);
